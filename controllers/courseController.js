@@ -1,4 +1,5 @@
-const CourseSchema = require ("../models/CourseModel")
+const CourseSchema = require ("../models/CourseModel");
+const ErrorResponse = require("../utils/ErrorResponse")
 
 /* @ACCESS private
 @http verbs POST
@@ -8,12 +9,6 @@ This is post request
 */
 
 exports.createCourseController = (req, res, next)=>{
-    try{
-        res.status(201)
-            .json({success:true,message:"successfully course created"})
-    }
-    catch{
-        next(err)
-        // here we will use error handling middleware
-    }
-}
+   try{res.send("ok")}
+   catch(err){next(new ErrorResponse("Internal Server Error",500))}
+};

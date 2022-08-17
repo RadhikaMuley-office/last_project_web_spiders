@@ -1,20 +1,23 @@
 const { model, Schema} = require('mongoose');
+
 const CourseSchema = new Schema(
     {
-    course_name:{type:String, required:[true,"course id is required"]},
+    course_name:{type:String, required:[true,"course name is required"]},
     course_id:{type:String, required:[true,"course id is required"]},
     course_language:{type:String, required:[true,"course language is required"]},
-    course_trainer:{type:String, required:[true,"course id is required"]},
-    course_duration:{type:String, required:[true,"course id is required"]},
+    course_trainer:{type:String, required:[true,"course trainer is required"]},
+    course_duration:{type:Number, required:[true,"course  Duration is required"]},
     course_category:
     {
         type:String,
         enum:['web development','java development','fullstack development','backend development','ui development','autamation testing'],
         required:[true,"course category is required"]
     },
-    course_date:{ type:Date,
+    course_date:{ 
+        type:Date,
         required:[true, "date is required"],
-        default: Date.now() },
+        default: Date.now() 
+        },
     course_image:{
         type:[""],
         required: [true,"course image is required"],

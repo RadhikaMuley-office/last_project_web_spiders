@@ -3,7 +3,8 @@ const morgan = require('morgan');
 const {PORT, NODE_ENV} = require('./config');
 const { success, error, info} = require('consola');
 const courseRoute = require("./routes/courseRoute");
-const ErrorHandler = require('./middlewares/errorhandling');
+const ErrorHandler = require('./middlewares/ErrorHandler');
+const connectDb = require('./config/db');
 
 let app = express();
 
@@ -33,3 +34,4 @@ let startServer = async()=>{
         }
     }   
 
+startServer();
