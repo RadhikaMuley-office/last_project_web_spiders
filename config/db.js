@@ -1,6 +1,6 @@
 const { connect }= require('mongoose');
 const { success, error, info} = require('consola')
-const{MONGODB_CLOUD,MONGODB_LOCAL, NODE_ENV} = require('/index');
+const{MONGODB_CLOUD,MONGODB_LOCAL, NODE_ENV} = require('./index');
 
 let connectDB =  async() =>
 {

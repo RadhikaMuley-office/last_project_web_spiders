@@ -9,6 +9,13 @@ This is post request
 */
 
 exports.createCourseController = (req, res, next)=>{
-   try{res.send("ok")}
-   catch(err){next(new ErrorResponse("Internal Server Error",500))}
+   try{
+      let image = req.files[0];
+      let video = req.files[0];
+      let body = req.body;
+      let  data = (image,video,body)
+      let payload= new CourseSchema(data).save()
+      res.status(200 )
+      // res.send("ok")}
+   }catch(err){next(new ErrorResponse("Internal Server Error",500))}
 };

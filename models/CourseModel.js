@@ -27,8 +27,7 @@ const CourseSchema = new Schema(
     course_video:{type:[""]},
     course_branch:{
         type:String,
-        enum:["basvanagudi","rajajinagar","btm Layout","old airport","hebbal","JNTU"
-        ],
+        enum:["basvanagudi","rajajinagar","btm Layout","old airport","hebbal","JNTU"],
         required : [true,"Branch is required"]},
     course_timings:{type:Date,required : [true,"Timings is required"],default:Date.now()},
     course_subjects:{type:String,
