@@ -1,0 +1,8 @@
+{
+  "name": "last_project_web_spiders",
+  "version": "1.0.0",
+  "description": "We are developing Web application by using express",
+  "main": "server.js",
+  "repository": "radhika",
+  "license": "MIT"
+}
