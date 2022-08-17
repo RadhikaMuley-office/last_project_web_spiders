@@ -28,8 +28,32 @@ const CourseSchema = new Schema(
         ],
         required : [true,"Branch is required"]},
     course_timings:{type:Date,required : [true,"Timings is required"],default:Date.now()},
-    course_subjects:{type:String,enum:["java","javascript","python","nodejs","reactjs",""],required : [true,"Subjects is required"]},
-    course_description:{required : [true,"Description is required"]},
+    course_subjects:{type:String,
+        enum:[
+                "java",
+                "javascript",
+                "python",
+                "nodejs",
+                "reactjs",
+                "expressjs",
+                "angular",
+                "selenium",
+                "manual testing",
+                "unit testing",
+                "nextjs",
+                "socket.io",
+                "swagger",
+                "postman"
+            ],
+    required : [true,"Subjects is required"]
+    },
+    course_description:
+    {
+        type:String,
+        required : [true,"Description is required"],
+        minlength: 100, 
+        maxlength:500
+    },
 },
 {timestamps:true}
 );
